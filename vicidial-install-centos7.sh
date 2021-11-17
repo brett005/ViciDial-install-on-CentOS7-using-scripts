@@ -287,13 +287,6 @@ cd /usr/src/astguiclient
 svn checkout svn://svn.eflo.net/agc_2-X/trunk
 cd /usr/src/astguiclient/trunk
 
-#Add vicidial phone
-cd /usr/src/asterisk
-wget -O /usr/src/asterisk/phones.sql https://raw.githubusercontent.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts/main/phones.sql
-wget -O /usr/src/asterisk/vicidial_user_groups.sql https://raw.githubusercontent.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts/main/vicidial_user_groups.sql
-wget -O /usr/src/asterisk/vicidial_users.sql https://raw.githubusercontent.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts/main/vicidial_users.sql
-
-
 #Add mysql users and Databases
 echo "%%%%%%%%%%%%%%%Please Enter Mysql Password Or Just Press Enter if you Dont have Password%%%%%%%%%%%%%%%%%%%%%%%%%%"
 mysql -u root -p << MYSQLCREOF
@@ -359,6 +352,21 @@ systemctl restart httpd
 #phpMyAdmin
 mkdir /var/www/html/phpMyAdmin
 wget -O /var/www/html/phpMyAdmin/index.php https://raw.githubusercontent.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts/main/index.php
+
+#Add vicidial phone
+wget -O /usr/src/asterisk/phones.sql https://raw.githubusercontent.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts/main/phones.sql
+wget -O /usr/src/asterisk/vicidial_user_groups.sql https://raw.githubusercontent.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts/main/vicidial_user_groups.sql
+wget -O /usr/src/asterisk/vicidial_users.sql https://raw.githubusercontent.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts/main/vicidial_users.sql
+
+#Add mysql users and Databases
+echo "%%%%%%%%%%%%%%%Please Enter Mysql Password Or Just Press Enter if you Dont have Password%%%%%%%%%%%%%%%%%%%%%%%%%%"
+mysql -u root -p << MYSQLCREOF
+use asterisk;
+\. /usr/src/asterisk/phones.sql
+\. /usr/src/asterisk/vicidial_user_groups.sql
+\. /usr/src/asterisk/vicidial_users.sql
+quit
+MYSQLCREOF
 
 #Install rc.local
 > /etc/rc.d/rc.local
