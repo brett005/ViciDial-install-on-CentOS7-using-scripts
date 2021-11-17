@@ -39,4 +39,4 @@ chmod +x vicidial-install-centos7.sh
 
 # Excute Below command
 
-/usr/share/astguiclient/ADMIN_update_server_ip.pl
+/usr/share/astguiclient/ADMIN_update_server_ip.pl --old-server_ip=127.0.0.1
