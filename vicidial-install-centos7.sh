@@ -308,8 +308,8 @@ flush privileges;
 use asterisk;
 \. /usr/src/astguiclient/trunk/extras/MySQL_AST_CREATE_tables.sql
 \. /usr/src/astguiclient/trunk/extras/first_server_install.sql
-\. /usr/src/asterisk/phones.sql
 update servers set asterisk_version='13.29.2';
+\. /usr/src/asterisk/phones.sql
 quit
 MYSQLCREOF
 
