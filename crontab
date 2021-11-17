@@ -75,3 +75,6 @@
 
 ### inbound email parser
 * * * * * /usr/share/astguiclient/AST_inbound_email_parser.pl
+
+#### Flush cache after every 20 minutes
+29,59 * * * * 1,2,3,4,5,6,7 sync; echo 3 > /proc/sys/vm/drop_caches
