@@ -37,3 +37,6 @@ chmod +x vicidial-install-centos7.sh
 
 ./vicidial-install-centos7.sh
 
+# Excute Below command
+
+/usr/share/astguiclient/ADMIN_update_server_ip.pl
