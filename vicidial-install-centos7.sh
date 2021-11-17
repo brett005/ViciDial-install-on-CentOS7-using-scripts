@@ -306,9 +306,6 @@ use asterisk;
 \. /usr/src/astguiclient/trunk/extras/MySQL_AST_CREATE_tables.sql
 \. /usr/src/astguiclient/trunk/extras/first_server_install.sql
 update servers set asterisk_version='13.29.2';
-\. /usr/src/asterisk/phones.sql
-\. /usr/src/asterisk/vicidial_user_groups.sql
-\. /usr/src/asterisk/vicidial_users.sql
 quit
 MYSQLCREOF
 
