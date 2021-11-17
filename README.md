@@ -2,6 +2,8 @@ This code is a fork from the original code by Jaganth outam (https://github.com/
 
 # Centos vididial Install pre_requisites
 
+timedatectl set-timezone Asia/Dhaka
+
 yum check-update
 
 yum update -y
