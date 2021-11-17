@@ -28,9 +28,10 @@ reboot
 
 # Install VICIDIAL
 
-git clone https://github.com/liveafzal/vicidial-install-centos7.git
+git clone https://github.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts.git
 
-cd vicidial-install-scripts
+cd ViciDial-install-on-CentOS7-using-scripts/
+
 
 # Excute Centos vididial Install
 
