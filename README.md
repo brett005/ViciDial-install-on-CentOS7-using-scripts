@@ -30,13 +30,10 @@ git clone https://github.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts
 
 cd ViciDial-install-on-CentOS7-using-scripts/
 
-
-# Excute Centos vididial Install
-
 chmod +x vicidial-install-centos7.sh
 
 ./vicidial-install-centos7.sh
 
-# Excute Below command
+# Excute Below command after all complete
 
 /usr/share/astguiclient/ADMIN_update_server_ip.pl --old-server_ip=127.0.0.1
