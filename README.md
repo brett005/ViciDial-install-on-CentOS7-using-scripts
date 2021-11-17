@@ -1,5 +1,3 @@
-An improved installation for the Vicidial on CentOS 7.
-
 This code is a fork from the original code by Jaganth outam (https://github.com/jaganthoutam/vicidial-install-scripts)
 
 # Centos vididial Install pre_requisites
