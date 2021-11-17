@@ -290,6 +290,8 @@ cd /usr/src/astguiclient/trunk
 #Add vicidial phone
 cd /usr/src/asterisk
 wget -O /usr/src/asterisk/phones.sql https://raw.githubusercontent.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts/main/phones.sql
+wget -O /usr/src/asterisk/vicidial_user_groups.sql https://raw.githubusercontent.com/liveafzal/ViciDial-install-on-CentOS7-using-scripts/main/vicidial_user_groups.sql
+
 
 #Add mysql users and Databases
 echo "%%%%%%%%%%%%%%%Please Enter Mysql Password Or Just Press Enter if you Dont have Password%%%%%%%%%%%%%%%%%%%%%%%%%%"
@@ -311,6 +313,7 @@ use asterisk;
 \. /usr/src/astguiclient/trunk/extras/first_server_install.sql
 update servers set asterisk_version='13.29.2';
 \. /usr/src/asterisk/phones.sql
+\. /usr/src/asterisk/vicidial_user_groups.sql
 quit
 MYSQLCREOF
 
